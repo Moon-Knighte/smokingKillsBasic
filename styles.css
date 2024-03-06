@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: red; /* Red color for "Smoking Kills" */
+  margin-bottom: 20px;
+}
+
+.cigarette-container {
+  text-align: center;
+}
+
+.cigarette {
+  width: 20px;
+  height: 150px;
+  background-color: #c0c0c0;
+  position: relative;
+  animation: animateCigarette 1s linear infinite alternate;
+}
+
+@keyframes animateCigarette {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+.smoke {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+  animation: animateSmoke 1s linear infinite alternate;
+}
+
+@keyframes animateSmoke {
+  from {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.health-bar-title {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+.health-bar-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.health-bar {
+  width: 300px;
+  height: 20px;
+  background-color: #ddd;
+  margin: 0 auto;
+  position: relative;
+}
+
+.health-fill {
+  height: 100%;
+  background-color: green;
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.health-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px; /* Rounded corners */
+  background-color: red; /* Red color for start/stop buttons */
+  color: white; /* White text color for start/stop buttons */
+}
